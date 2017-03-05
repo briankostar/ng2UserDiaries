@@ -6,19 +6,24 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/layout/header/header.component';
 import { FooterComponent } from './shared/layout/footer/footer.component';
+import {
+	ApiService,
+	JwtService,
+	UserService
+} from './shared'
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ApiService, JwtService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
