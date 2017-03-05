@@ -12,3 +12,4 @@ bin-release/
 .tmp
 
 /node_modules
+/dist
