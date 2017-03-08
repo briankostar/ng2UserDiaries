@@ -11,11 +11,15 @@ import { HeaderComponent } from './shared/layout/header/header.component';
 import { FooterComponent } from './shared/layout/footer/footer.component';
 import { HomeModule } from './home/home.module'
 import { MyPageModule } from './my-page/my-page.module';
+import { RegisterModule } from './register/register.module';
+import { LoginModule } from './login/login.module';
+import { ProfileModule } from './profile/profile.module';
 import {
 	ApiService,
 	JwtService,
 	UserService
 } from './shared';
+
 
 @NgModule( {
 	declarations:[
@@ -29,7 +33,10 @@ import {
 		HttpModule,
 		Route,
 		HomeModule,
-		MyPageModule
+		MyPageModule,
+		RegisterModule,
+		LoginModule,
+		ProfileModule
 	],
 	providers   :[ ApiService, JwtService, UserService ],
 	bootstrap   :[ AppComponent ]
