@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
 
 const HomeRoute: ModuleWithProviders = RouterModule.forChild( [ {
-	path     :'home',
+	path     :'',
 	component:HomeComponent
 } ] );
 
