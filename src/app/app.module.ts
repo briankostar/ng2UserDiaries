@@ -4,12 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-const route = RouterModule.forRoot( [], { useHash:true } );
+const Route = RouterModule.forRoot( [], { useHash:true } );
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/layout/header/header.component';
 import { FooterComponent } from './shared/layout/footer/footer.component';
 import { HomeModule } from './home/home.module'
+import { MyPageModule } from './my-page/my-page.module';
 import {
 	ApiService,
 	JwtService,
@@ -26,8 +27,9 @@ import {
 		BrowserModule,
 		FormsModule,
 		HttpModule,
-		route,
-		HomeModule
+		Route,
+		HomeModule,
+		MyPageModule
 	],
 	providers   :[ ApiService, JwtService, UserService ],
 	bootstrap   :[ AppComponent ]
