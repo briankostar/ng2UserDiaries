@@ -1,19 +1,23 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MyPageComponent } from './my-page.component';
+import { ProfileResolver } from "./profile-resolver.service";
+import { SharedModule } from "../shared/shared.module";
 
 const MyPageRoute:ModuleWithProviders = RouterModule.forChild( [ {
-	path     :'my-page',
+	path     :'my-page/:username',
 	component:MyPageComponent
 } ] );
 
 @NgModule( {
 	imports     :[
-		CommonModule,
+		SharedModule,
 		MyPageRoute
 	],
-	declarations:[ MyPageComponent ]
+	declarations:[ MyPageComponent ],
+	providers: [
+		ProfileResolver
+	]
 } )
 export class MyPageModule {
 }

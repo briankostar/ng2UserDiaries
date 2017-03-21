@@ -26,15 +26,8 @@ export class HeaderComponent implements OnInit {
 		this.userService
 			.purgeAuth();
 
-		this.router.navigateByUrl( '/' )
+		this.router.navigateByUrl( '/' );
 
-			// .subscribe(
-			// 	data => this.router.navigateByUrl( '/' ),
-			// 	err => {
-			// 		// this.errors = err;
-			// 		console.log( 'ERROR!' );
-			// 	}
-			// );
 	}
 
 }

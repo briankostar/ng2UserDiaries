@@ -1,3 +1,8 @@
 <p>
-  my-page works!
+	{{profile | json}}
+	
 </p>
+<img [src]="profile.image" alt="Profile image">
+	<h2>Username: {{profile.username }}</h2>
+
+<h3>My articles:</h3>
