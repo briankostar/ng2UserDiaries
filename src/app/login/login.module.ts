@@ -2,6 +2,7 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login.component';
+import { SharedModule } from '../shared';
 
 const LoginRoute:ModuleWithProviders = RouterModule.forChild( [ {
 	path     :'login',
@@ -11,7 +12,8 @@ const LoginRoute:ModuleWithProviders = RouterModule.forChild( [ {
 @NgModule( {
 	imports     :[
 		CommonModule,
-		LoginRoute
+		LoginRoute,
+		SharedModule
 	],
 	declarations:[ LoginComponent ]
 } )

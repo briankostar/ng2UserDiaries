@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+import { ShowAuthedDirective } from './show-authed.directive';
+
 
 @NgModule({
 	imports: [
@@ -14,6 +16,7 @@ import { RouterModule } from '@angular/router';
 		RouterModule
 	],
 	declarations: [
+		ShowAuthedDirective
 	],
 	exports: [
 		CommonModule,
@@ -21,6 +24,7 @@ import { RouterModule } from '@angular/router';
 		ReactiveFormsModule,
 		HttpModule,
 		RouterModule,
+		ShowAuthedDirective
 	]
 })
 export class SharedModule {}

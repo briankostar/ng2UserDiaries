@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './shared/layout/header/header.component';
-import { FooterComponent } from './shared/layout/footer/footer.component';
+// import { HeaderComponent } from './shared/layout/header/header.component';
+// import { FooterComponent } from './shared/layout/footer/footer.component';
 import { HomeModule } from './home/home.module'
 import { MyPageModule } from './my-page/my-page.module';
 import { RegisterModule } from './register/register.module';
@@ -14,7 +14,10 @@ import { ProfileModule } from './profile/profile.module';
 import {
 	ApiService,
 	JwtService,
-	UserService
+	UserService,
+	HeaderComponent,
+	FooterComponent,
+	SharedModule
 } from './shared';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
@@ -37,7 +40,8 @@ const Route = RouterModule.forRoot( [{ path: '**', component: PageNotFoundCompon
 		MyPageModule,
 		RegisterModule,
 		LoginModule,
-		ProfileModule
+		ProfileModule,
+		SharedModule
 	],
 	providers   :[ ApiService, JwtService, UserService ],
 	bootstrap   :[ AppComponent ]
