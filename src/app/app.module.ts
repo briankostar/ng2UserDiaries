@@ -18,7 +18,8 @@ import {
 	HeaderComponent,
 	FooterComponent,
 	SharedModule,
-	ProfilesService
+	ProfilesService,
+	ArticlesService
 } from './shared';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
@@ -44,7 +45,7 @@ const Route = RouterModule.forRoot( [{ path: '**', component: PageNotFoundCompon
 		SettingModule,
 		SharedModule
 	],
-	providers   :[ ApiService, JwtService, UserService, ProfilesService ],
+	providers   :[ ApiService, JwtService, UserService, ProfilesService, ArticlesService ],
 	bootstrap   :[ AppComponent ]
 } )
 export class AppModule {
