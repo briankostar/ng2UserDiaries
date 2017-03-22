@@ -3,6 +3,7 @@
 		<nav class="nav blog-nav">
 			<a class="nav-link" [routerLink]="['/']">Home</a>
 			<!--<a class="nav-link" [routerLink]="['/']" routerLinkActive="active" //having routerlink active on root activates everytime..>Home</a>-->
+			<a class="nav-link" routerLink="/editor" routerLinkActive="active" *showAuthed="true">Write</a>
 			<a class="nav-link" [routerLink]="['my-page', currentUser.username]" routerLinkActive="active">My Page</a>
 			<a class="nav-link" routerLink="/setting" routerLinkActive="active" *showAuthed="true">Setting</a>
 			<a class="nav-link" routerLink="register" routerLinkActive="active" *showAuthed="false">Sign Up</a>

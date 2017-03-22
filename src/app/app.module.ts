@@ -22,6 +22,7 @@ import {
 	ArticlesService
 } from './shared';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { EditorModule } from "./editor/editor.module";
 
 
 const Route = RouterModule.forRoot( [{ path: '**', component: PageNotFoundComponent }], { useHash:true } );
@@ -43,7 +44,8 @@ const Route = RouterModule.forRoot( [{ path: '**', component: PageNotFoundCompon
 		RegisterModule,
 		LoginModule,
 		SettingModule,
-		SharedModule
+		SharedModule,
+		EditorModule
 	],
 	providers   :[ ApiService, JwtService, UserService, ProfilesService, ArticlesService ],
 	bootstrap   :[ AppComponent ]
