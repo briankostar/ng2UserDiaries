@@ -3,4 +3,7 @@
 	<p>{{article.description }}</p>
 	<p>{{article.body }}</p>
 	<p>{{article.author?.username}}</p>
+
+	<a role="button" href="./#/editor/{{article.slug}}">EDIT</a>
+	<button (click)="deleteArticle()">DELETE</button>
 </div>

@@ -16,7 +16,7 @@ export class EditableArticleResolver implements Resolve<Article> {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<any> {
-
+		console.log('getting article, ', route.params['slug']);
     return this.articlesService.get(route.params['slug'])
            .map(
              article => {
