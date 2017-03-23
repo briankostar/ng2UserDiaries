@@ -10,7 +10,7 @@ import { HomeModule } from './home/home.module'
 import { MyPageModule } from './my-page/my-page.module';
 import { RegisterModule } from './register/register.module';
 import { LoginModule } from './login/login.module';
-import { SettingModule } from './setting/setting.module';
+import { SettingsModule } from './settings/setting.module';
 import {
 	ApiService,
 	JwtService,
@@ -43,9 +43,9 @@ const Route = RouterModule.forRoot( [{ path: '**', component: PageNotFoundCompon
 		MyPageModule,
 		RegisterModule,
 		LoginModule,
-		SettingModule,
 		SharedModule,
-		EditorModule
+		EditorModule,
+		SettingsModule
 	],
 	providers   :[ ApiService, JwtService, UserService, ProfilesService, ArticlesService ],
 	bootstrap   :[ AppComponent ]
